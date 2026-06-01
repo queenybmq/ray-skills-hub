@@ -1,6 +1,6 @@
 hub:
   name: ray-skills-hub
-  version: v0.1.0
+  version: v0.2.0
   updated: "2026-06-02"
 
 skills:
@@ -10,7 +10,7 @@ skills:
     owner: Ray
     recommended: true
     maturity: stable
-    version: v0.1.0
+    version: v0.2.0
     license: MIT
     upstream: null
     tags:

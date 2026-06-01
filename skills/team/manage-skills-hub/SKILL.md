@@ -23,7 +23,6 @@ skills/
     references/
     assets/
 third_party/
-work/
 ```
 
 Only `SKILL.md` is required for a skill. Keep optional folders only when they are used.
@@ -54,13 +53,26 @@ After installation, tell the user to restart Codex.
 4. Update `CATALOG.yaml` and the skills table in `README.md`.
 5. Validate YAML, paths, and name consistency before finishing.
 
+### Collaborator PR Flow
+
+For external collaborators, use this exact flow:
+
+1. Fork `Coco422/ray-skills-hub`.
+2. Create a branch in the fork, such as `feat/add-<skill-name>` or `fix/update-<skill-name>`.
+3. Add or update files only under the relevant skill directory plus `CATALOG.yaml` and `README.md`.
+4. Keep historical versions in Git history; the repository tree should contain only the latest accepted version of each skill.
+5. Push the branch to the fork and open a PR against `Coco422/ray-skills-hub:main`.
+6. Ask the PR author to include purpose, trigger examples, source/license, assets included, and validation run.
+
+When Ray asks an agent to process a PR, review the diff, verify the catalog and skill frontmatter, check assets/provenance, then either request changes or merge.
+
 ### Third-Party or Upstream Skills
 
 Do not trust a moving upstream branch as production input. Record upstream repo, commit/ref, license, importer, and review status. Keep third-party material isolated until reviewed.
 
 ### Release
 
-For a release, update hub `version`, skill entry versions, and README install examples. If the user asks to push, confirm the Git repo has a remote and use normal git commit/tag/push flow.
+For a release, update hub `version`, skill entry versions, and README install examples. Do not keep draft folders in the repository. If the user asks to push, confirm the Git repo has a remote and use normal git commit/tag/push flow.
 
 ## Validation
 

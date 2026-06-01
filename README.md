@@ -7,7 +7,7 @@
 | Skill | Source | Version | Maturity | Recommended | Path |
 | --- | --- | --- | --- | --- | --- |
 | `manage-skills-hub` | team | `v0.1.0` | stable | yes | `skills/team/manage-skills-hub` |
-| `ray-xiaofan-illustrations` | team | `v0.1.0` | beta | yes | `skills/team/ray-xiaofan-illustrations` |
+| `ray-xiaofan-illustrations` | team | `v0.2.0` | beta | yes | `skills/team/ray-xiaofan-illustrations` |
 
 ## Quick Start
 
@@ -35,7 +35,7 @@ scripts/install-skill-from-github.py \
   --url https://github.com/<owner>/<repo>/tree/v0.1.0/skills/team/manage-skills-hub
 
 scripts/install-skill-from-github.py \
-  --url https://github.com/<owner>/<repo>/tree/v0.1.0/skills/team/ray-xiaofan-illustrations
+  --url https://github.com/<owner>/<repo>/tree/main/skills/team/ray-xiaofan-illustrations
 ```
 
 安装后重启 Codex，让新 skill 被重新发现。
@@ -48,9 +48,19 @@ scripts/install-skill-from-github.py \
 - `path` 指向真实 skill 目录
 - `version` 标注当前 hub 收录版本
 
-## Drafts
+## Collaborate
 
-`work/v0.2.0/ray-xiaofan-illustrations/` 是 `ray-xiaofan-illustrations` 的 v0.2.0 资产开发副本，包含新版 v4 动作参考表、14 张新版 examples 和 `ASSET_MANIFEST.md`。它还没有合并进正式 `skills/team/` 目录。
+协作者新增或更新 skill 时走 PR，不直接改主仓库：
+
+1. Fork `Coco422/ray-skills-hub` 到自己的 GitHub 账号。
+2. 从 fork 新建分支，例如 `feat/add-my-skill` 或 `fix/update-skill-name`。
+3. 把 skill 放到 `skills/team/<skill-name>/`，确保目录名等于 `SKILL.md` frontmatter 里的 `name`。
+4. 更新 `CATALOG.yaml` 和 README 的 Skills 表。
+5. 本地验证 YAML、路径、frontmatter name 一致。
+6. Push 到自己的 fork，并向 `Coco422/ray-skills-hub:main` 发 PR。
+7. 在 PR 描述里写清 skill 用途、触发场景、来源/授权、是否需要 assets，以及建议安装路径。
+
+Ray 会让 agent 处理 PR review、校验、整理和合并。
 
 ## Third Party
 
