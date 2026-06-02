@@ -3,7 +3,7 @@ name: manage-skills-hub
 description: Manage and use Ray Skills Hub, a GitHub-based Codex skills catalog. Use when the user asks to browse available team skills, install a skill from this hub, add or update a skill, prepare a release, maintain CATALOG.yaml/README.md, migrate a local skill into the hub, or record third-party/upstream provenance.
 ---
 
-# Manage Skills Hub
+# Manage Skills Hub v0.3.0
 
 ## Overview
 

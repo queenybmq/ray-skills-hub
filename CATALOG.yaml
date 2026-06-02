@@ -1,7 +1,7 @@
 hub:
   name: ray-skills-hub
-  version: v0.2.0
-  updated: "2026-06-02"
+  version: v0.3.0
+  updated: "2026-06-03"
 
 skills:
   - id: hv-analysis
@@ -42,7 +42,7 @@ skills:
     owner: Ray
     recommended: true
     maturity: stable
-    version: v0.2.0
+    version: v0.3.0
     license: MIT
     upstream: null
     tags:
@@ -50,7 +50,7 @@ skills:
       - catalog
       - maintenance
       - installation
-    last_reviewed: "2026-06-02"
+    last_reviewed: "2026-06-03"
 
   - id: ray-xiaofan-illustrations
     path: skills/team/ray-xiaofan-illustrations
