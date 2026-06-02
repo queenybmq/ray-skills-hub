@@ -58,7 +58,7 @@ skills:
     owner: Ray
     recommended: true
     maturity: beta
-    version: v0.1.0
+    version: v0.2.0
     license: MIT
     upstream:
       repo: https://github.com/helloianneo/ian-xiaohei-illustrations
