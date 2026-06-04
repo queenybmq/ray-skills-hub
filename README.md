@@ -9,7 +9,7 @@
 | Skill | Source | Version | Maturity | Recommended | Path |
 | --- | --- | --- | --- | --- | --- |
 | `hv-analysis` | team | `v0.2.0` | stable | yes | `skills/team/hv-analysis` |
-| `manage-skills-hub` | team | `v0.3.0` | stable | yes | `skills/team/manage-skills-hub` |
+| `manage-skills-hub` | team | `v0.4.0` | stable | yes | `skills/team/manage-skills-hub` |
 | `neat-freak` | team | `v0.2.0` | stable | yes | `skills/team/neat-freak` |
 | `project-daily-summary` | team | `v0.2.0` | stable | yes | `skills/team/project-daily-summary` |
 | `ray-xiaofan-illustrations` | team | `v0.4.0` | beta | yes | `skills/team/ray-xiaofan-illustrations` |
@@ -51,7 +51,7 @@ scripts/install-skill-from-github.py \
 
 ```bash
 scripts/install-skill-from-github.py \
-  --url https://github.com/<owner>/<repo>/tree/v0.3.0/skills/team/manage-skills-hub
+  --url https://github.com/<owner>/<repo>/tree/v0.4.0/skills/team/manage-skills-hub
 
 scripts/install-skill-from-github.py \
   --url https://github.com/<owner>/<repo>/tree/v0.4.0/skills/team/ray-xiaofan-illustrations
