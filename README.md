@@ -1,6 +1,6 @@
 # Ray Skills Hub
 
-一个极简 GitHub-based Codex skills hub，用来管理 Ray 和团队共享的 skills，也为后续第三方推荐 skills 留出目录和元数据约定。
+一个极简 GitHub-based skills hub，用来管理 Ray 和团队共享的 skills（兼容 Claude Code 和 Codex），也为后续第三方推荐 skills 留出目录和元数据约定。
 
 ## Skills
 
@@ -9,7 +9,7 @@
 | Skill | Source | Version | Maturity | Recommended | Path |
 | --- | --- | --- | --- | --- | --- |
 | `hv-analysis` | team | `v0.2.0` | stable | yes | `skills/team/hv-analysis` |
-| `manage-skills-hub` | team | `v0.3.0` | stable | yes | `skills/team/manage-skills-hub` |
+| `manage-skills-hub` | team | `v0.4.0` | stable | yes | `skills/team/manage-skills-hub` |
 | `neat-freak` | team | `v0.2.0` | stable | yes | `skills/team/neat-freak` |
 | `project-daily-summary` | team | `v0.2.0` | stable | yes | `skills/team/project-daily-summary` |
 | `ray-xiaofan-illustrations` | team | `v0.4.0` | beta | yes | `skills/team/ray-xiaofan-illustrations` |
@@ -19,6 +19,8 @@
 | Skill | Source | Version | Maturity | Recommended | Path |
 | --- | --- | --- | --- | --- | --- |
 | `ray-writer` | personal | `v0.2.0` | stable | yes | `skills/personal/ray-writer` |
+| `ray-writer-blog` | personal | `v0.1.0` | stable | yes | `skills/personal/ray-writer-blog` |
+| `capture` | personal | `v0.1.0` | beta | yes | `skills/personal/capture` |
 | `codex-mac-patch` | personal | `v0.1.0` | beta | yes | `skills/personal/codex-mac-patch` |
 
 ## Quick Start
@@ -29,11 +31,33 @@
 - 做会话收尾知识整理：用 `$neat-freak`。
 - 做横纵分析法深度研究：用 `$hv-analysis`。
 - 写 Ray 公众号长文：用 `$ray-writer`。
+- 写 Ray 博客文章：用 `$ray-writer-blog`。
+- 一键采集网页或 PDF：用 `$capture`。
 - Codex Desktop macOS 解限补丁：用 `$codex-mac-patch`。
 
 ## Install
 
-安装时使用 Codex 自带的 `$skill-installer`，从 GitHub repo/path 安装：
+### Claude Code
+
+```bash
+# 克隆 hub 仓库
+gh repo clone Coco422/ray-skills-hub /tmp/ray-skills-hub
+
+# 拷贝到全局 skills 目录
+cp -r /tmp/ray-skills-hub/skills/team/manage-skills-hub ~/.claude/skills/
+cp -r /tmp/ray-skills-hub/skills/personal/ray-writer ~/.claude/skills/
+cp -r /tmp/ray-skills-hub/skills/personal/ray-writer-blog ~/.claude/skills/
+cp -r /tmp/ray-skills-hub/skills/personal/capture ~/.claude/skills/
+
+# 或拷贝到项目级 skills 目录
+cp -r /tmp/ray-skills-hub/skills/personal/capture <your-project>/.claude/skills/
+```
+
+安装后重启 Claude Code 会话，或执行 `/skills` 重新加载。
+
+### Codex
+
+使用 `$skill-installer` 从 GitHub repo/path 安装：
 
 ```bash
 scripts/install-skill-from-github.py \
@@ -50,6 +74,14 @@ scripts/install-skill-from-github.py \
 
 scripts/install-skill-from-github.py \
   --repo <owner>/<repo> \
+  --path skills/personal/ray-writer-blog
+
+scripts/install-skill-from-github.py \
+  --repo <owner>/<repo> \
+  --path skills/personal/capture
+
+scripts/install-skill-from-github.py \
+  --repo <owner>/<repo> \
   --path skills/personal/codex-mac-patch
 ```
 
@@ -57,16 +89,7 @@ scripts/install-skill-from-github.py \
 
 ```bash
 scripts/install-skill-from-github.py \
-  --url https://github.com/<owner>/<repo>/tree/v0.3.0/skills/team/manage-skills-hub
-
-scripts/install-skill-from-github.py \
-  --url https://github.com/<owner>/<repo>/tree/v0.4.0/skills/team/ray-xiaofan-illustrations
-
-scripts/install-skill-from-github.py \
-  --url https://github.com/<owner>/<repo>/tree/main/skills/personal/ray-writer
-
-scripts/install-skill-from-github.py \
-  --url https://github.com/<owner>/<repo>/tree/main/skills/personal/codex-mac-patch
+  --url https://github.com/<owner>/<repo>/tree/v0.4.0/skills/team/manage-skills-hub
 ```
 
 安装后重启 Codex，让新 skill 被重新发现。

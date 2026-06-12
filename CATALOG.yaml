@@ -1,7 +1,7 @@
 hub:
   name: ray-skills-hub
-  version: v0.4.0
-  updated: "2026-06-04"
+  version: v0.5.0
+  updated: "2026-06-12"
 
 skills:
   - id: hv-analysis
@@ -42,7 +42,7 @@ skills:
     owner: Ray
     recommended: true
     maturity: stable
-    version: v0.3.0
+    version: v0.4.0
     license: MIT
     upstream: null
     tags:
@@ -50,7 +50,7 @@ skills:
       - catalog
       - maintenance
       - installation
-    last_reviewed: "2026-06-03"
+    last_reviewed: "2026-06-12"
 
   - id: ray-xiaofan-illustrations
     path: skills/team/ray-xiaofan-illustrations
@@ -119,3 +119,37 @@ skills:
       - projects
       - reporting
     last_reviewed: "2026-06-02"
+
+  - id: ray-writer-blog
+    path: skills/personal/ray-writer-blog
+    source: personal
+    owner: Ray
+    recommended: true
+    maturity: stable
+    version: v0.1.0
+    license: private
+    upstream: null
+    tags:
+      - writing
+      - blog
+      - hugo
+      - tech-writing
+      - ray
+    last_reviewed: "2026-06-12"
+
+  - id: capture
+    path: skills/personal/capture
+    source: personal
+    owner: Ray
+    recommended: true
+    maturity: beta
+    version: v0.1.0
+    license: private
+    upstream: null
+    tags:
+      - capture
+      - web-scraping
+      - pdf
+      - playwright
+      - inbox
+    last_reviewed: "2026-06-12"

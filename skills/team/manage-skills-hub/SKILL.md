@@ -1,13 +1,13 @@
 ---
 name: manage-skills-hub
-description: Manage and use Ray Skills Hub, a GitHub-based Codex skills catalog. Use when the user asks to browse available team skills, install a skill from this hub, add or update a skill, prepare a release, maintain CATALOG.yaml/README.md, migrate a local skill into the hub, or record third-party/upstream provenance.
+description: Manage and use Ray Skills Hub, a GitHub-based skills catalog (compatible with Claude Code and Codex). Use when the user asks to browse available team skills, install a skill from this hub, add or update a skill, prepare a release, maintain CATALOG.yaml/README.md, migrate a local skill into the hub, or record third-party/upstream provenance.
 ---
 
 # Manage Skills Hub v0.3.0
 
 ## Overview
 
-Use this skill to operate the Ray Skills Hub with the smallest reliable workflow. The hub is a GitHub repository where each Codex skill remains a normal skill folder, and `CATALOG.yaml` plus `README.md` provide the human and machine index.
+Use this skill to operate the Ray Skills Hub with the smallest reliable workflow. The hub is a GitHub repository where each skill remains a normal skill folder, and `CATALOG.yaml` plus `README.md` provide the human and machine index.
 
 ## Repository Shape
 
@@ -19,7 +19,6 @@ CATALOG.yaml
 skills/
   team/<skill-name>/
     SKILL.md
-    agents/openai.yaml
     references/
     assets/
   personal/<skill-name>/
@@ -37,15 +36,31 @@ Read `CATALOG.yaml` first, then `README.md` if the user needs a human-facing sum
 
 ### Install a Skill
 
-Prefer the built-in `$skill-installer` flow with a stable GitHub path:
+#### Claude Code
+
+Copy the skill folder to `~/.claude/skills/<skill-name>/` (global) or `<project>/.claude/skills/<skill-name>/` (project-scoped):
 
 ```bash
-scripts/install-skill-from-github.py \
+# Clone the hub repo
+gh repo clone Coco422/ray-skills-hub /tmp/ray-skills-hub
+
+# Copy a team or personal skill
+cp -r /tmp/ray-skills-hub/skills/team/<skill-name> ~/.claude/skills/
+```
+
+Or use the install script (if available):
+
+```bash
+python3 scripts/install-skill-from-github.py \
   --repo <owner>/<repo> \
   --path skills/team/<skill-name>
 ```
 
-After installation, tell the user to restart Codex.
+After installation, restart the Claude Code session (or `/skills` to reload).
+
+#### Codex
+
+Copy the skill folder to `~/.codex/skills/<skill-name>/` and restart Codex.
 
 ### Add or Update a Team Skill
 
@@ -91,11 +106,4 @@ Run targeted checks:
 
 ```bash
 python3 scripts/validate_catalog.py
-```
-
-If PyYAML is available, also run:
-
-```bash
-python3 /Users/ray/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
-  skills/team/<skill-name>
 ```
