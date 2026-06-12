@@ -86,6 +86,24 @@ skills:
       - handoff
     last_reviewed: "2026-06-02"
 
+  - id: codex-mac-patch
+    path: skills/personal/codex-mac-patch
+    source: personal
+    owner: Ray
+    recommended: true
+    maturity: beta
+    version: v0.1.0
+    license: private
+    upstream: null
+    tags:
+      - codex
+      - macos
+      - electron
+      - patch
+      - asar
+      - unlock
+    last_reviewed: "2026-06-12"
+
   - id: project-daily-summary
     path: skills/team/project-daily-summary
     source: team

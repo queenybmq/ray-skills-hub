@@ -19,6 +19,7 @@
 | Skill | Source | Version | Maturity | Recommended | Path |
 | --- | --- | --- | --- | --- | --- |
 | `ray-writer` | personal | `v0.2.0` | stable | yes | `skills/personal/ray-writer` |
+| `codex-mac-patch` | personal | `v0.1.0` | beta | yes | `skills/personal/codex-mac-patch` |
 
 ## Quick Start
 
@@ -28,6 +29,7 @@
 - 做会话收尾知识整理：用 `$neat-freak`。
 - 做横纵分析法深度研究：用 `$hv-analysis`。
 - 写 Ray 公众号长文：用 `$ray-writer`。
+- Codex Desktop macOS 解限补丁：用 `$codex-mac-patch`。
 
 ## Install
 
@@ -45,6 +47,10 @@ scripts/install-skill-from-github.py \
 scripts/install-skill-from-github.py \
   --repo <owner>/<repo> \
   --path skills/personal/ray-writer
+
+scripts/install-skill-from-github.py \
+  --repo <owner>/<repo> \
+  --path skills/personal/codex-mac-patch
 ```
 
 也可以固定到 release/tag：
@@ -58,6 +64,9 @@ scripts/install-skill-from-github.py \
 
 scripts/install-skill-from-github.py \
   --url https://github.com/<owner>/<repo>/tree/main/skills/personal/ray-writer
+
+scripts/install-skill-from-github.py \
+  --url https://github.com/<owner>/<repo>/tree/main/skills/personal/codex-mac-patch
 ```
 
 安装后重启 Codex，让新 skill 被重新发现。

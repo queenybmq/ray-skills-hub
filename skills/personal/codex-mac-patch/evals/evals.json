@@ -1,0 +1,46 @@
+{
+  "skill_name": "codex-mac-patch",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Codex Desktop 刚刚 Sparkle 自动更新了，Fast Mode 又灰了，帮我重新打一下补丁",
+      "expected_output": "Agent follows the full 6-step workflow: verify not running, backup, discover gates, generate repack.mjs, install + resign, verify config and launch",
+      "files": [],
+      "expectations": [
+        "Checks that Codex Desktop is not running before proceeding",
+        "Creates timestamped backups of app.asar, Info.plist, config.toml",
+        "Runs discover.mjs to locate gate files by content pattern",
+        "Generates repack.mjs with PATCHES array filled from discovery output",
+        "Updates ElectronAsarIntegrity hash in Info.plist",
+        "Runs codesign --force --sign - for ad-hoc resign",
+        "Ensures computer_use=true and service_tier=priority in config.toml"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "我的 Codex 桌面版 Computer Use 功能显示 statsig-disabled，怎么修？macOS 系统",
+      "expected_output": "Agent recognizes this is the computer-use-gate issue, explains the Statsig gate bypass, and runs the patch workflow",
+      "files": [],
+      "expectations": [
+        "Identifies the issue as the computer-use-gate Statsig bypass",
+        "Explains that Statsig flags gate non-chatgpt users",
+        "Follows the codex-mac-patch skill workflow",
+        "Does NOT patch the central statsig client module"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "re-patch codex after update, also the discovery script found PATTERN_MISMATCH for fastmode-ui — the minified JS changed shape",
+      "expected_output": "Agent handles the version drift case: extracts the mismatched file, re-analyzes the gate pattern, crafts new find/replace, updates discover.mjs and repack.mjs",
+      "files": [],
+      "expectations": [
+        "Detects the PATTERN_MISMATCH from discovery output",
+        "Extracts the relevant file from the asar for analysis",
+        "Reads references/gate-patterns.md to understand the gate's behavioral intent",
+        "Crafts new find/replace that achieves the same bypass",
+        "Verifies find appears exactly once in the file",
+        "Updates both discover.mjs and repack.mjs with the new patterns"
+      ]
+    }
+  ]
+}
