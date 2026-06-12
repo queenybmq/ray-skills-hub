@@ -31,10 +31,11 @@ skills:
     upstream: null
     tags:
       - writing
-      - wechat
-      - longform
+      - blog
+      - hugo
+      - tech-writing
       - ray
-    last_reviewed: "2026-06-02"
+    last_reviewed: "2026-06-12"
 
   - id: manage-skills-hub
     path: skills/team/manage-skills-hub
@@ -119,23 +120,6 @@ skills:
       - projects
       - reporting
     last_reviewed: "2026-06-02"
-
-  - id: ray-writer-blog
-    path: skills/personal/ray-writer-blog
-    source: personal
-    owner: Ray
-    recommended: true
-    maturity: stable
-    version: v0.1.0
-    license: private
-    upstream: null
-    tags:
-      - writing
-      - blog
-      - hugo
-      - tech-writing
-      - ray
-    last_reviewed: "2026-06-12"
 
   - id: capture
     path: skills/personal/capture

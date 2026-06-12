@@ -19,7 +19,6 @@
 | Skill | Source | Version | Maturity | Recommended | Path |
 | --- | --- | --- | --- | --- | --- |
 | `ray-writer` | personal | `v0.2.0` | stable | yes | `skills/personal/ray-writer` |
-| `ray-writer-blog` | personal | `v0.1.0` | stable | yes | `skills/personal/ray-writer-blog` |
 | `capture` | personal | `v0.1.0` | beta | yes | `skills/personal/capture` |
 | `codex-mac-patch` | personal | `v0.1.0` | beta | yes | `skills/personal/codex-mac-patch` |
 
@@ -30,8 +29,7 @@
 - 做项目级日报：用 `$project-daily-summary`。
 - 做会话收尾知识整理：用 `$neat-freak`。
 - 做横纵分析法深度研究：用 `$hv-analysis`。
-- 写 Ray 公众号长文：用 `$ray-writer`。
-- 写 Ray 博客文章：用 `$ray-writer-blog`。
+- 写 Ray 博客文章：用 `$ray-writer`。
 - 一键采集网页或 PDF：用 `$capture`。
 - Codex Desktop macOS 解限补丁：用 `$codex-mac-patch`。
 
@@ -46,7 +44,6 @@ gh repo clone Coco422/ray-skills-hub /tmp/ray-skills-hub
 # 拷贝到全局 skills 目录
 cp -r /tmp/ray-skills-hub/skills/team/manage-skills-hub ~/.claude/skills/
 cp -r /tmp/ray-skills-hub/skills/personal/ray-writer ~/.claude/skills/
-cp -r /tmp/ray-skills-hub/skills/personal/ray-writer-blog ~/.claude/skills/
 cp -r /tmp/ray-skills-hub/skills/personal/capture ~/.claude/skills/
 
 # 或拷贝到项目级 skills 目录
@@ -71,10 +68,6 @@ scripts/install-skill-from-github.py \
 scripts/install-skill-from-github.py \
   --repo <owner>/<repo> \
   --path skills/personal/ray-writer
-
-scripts/install-skill-from-github.py \
-  --repo <owner>/<repo> \
-  --path skills/personal/ray-writer-blog
 
 scripts/install-skill-from-github.py \
   --repo <owner>/<repo> \
