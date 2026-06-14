@@ -1,7 +1,7 @@
 hub:
   name: ray-skills-hub
   version: v0.5.0
-  updated: "2026-06-12"
+  updated: "2026-06-15"
 
 skills:
   - id: hv-analysis
@@ -59,7 +59,7 @@ skills:
     owner: Ray
     recommended: true
     maturity: beta
-    version: v0.4.0
+    version: v0.5.0
     license: MIT
     upstream:
       repo: https://github.com/helloianneo/ian-xiaohei-illustrations
@@ -69,7 +69,9 @@ skills:
       - chinese-writing
       - xiaofan
       - image-generation
-    last_reviewed: "2026-06-04"
+      - xiaohongshu
+      - knowledge-cards
+    last_reviewed: "2026-06-15"
 
   - id: neat-freak
     path: skills/team/neat-freak

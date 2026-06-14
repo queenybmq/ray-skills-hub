@@ -12,7 +12,7 @@
 | `manage-skills-hub` | team | `v0.4.0` | stable | yes | `skills/team/manage-skills-hub` |
 | `neat-freak` | team | `v0.2.0` | stable | yes | `skills/team/neat-freak` |
 | `project-daily-summary` | team | `v0.2.0` | stable | yes | `skills/team/project-daily-summary` |
-| `ray-xiaofan-illustrations` | team | `v0.4.0` | beta | yes | `skills/team/ray-xiaofan-illustrations` |
+| `ray-xiaofan-illustrations` | team | `v0.5.0` | beta | yes | `skills/team/ray-xiaofan-illustrations` |
 
 ### Personal
 
@@ -25,7 +25,7 @@
 ## Quick Start
 
 - 管理这个 hub、查看可用 skills、添加/更新 skill、准备发版：用 `$manage-skills-hub`。
-- 生成 Ray / 小反风格中文正文配图：用 `$ray-xiaofan-illustrations`。
+- 生成 Ray / 小反风格视觉资产、小红书竖版知识卡、封面和正文配图：用 `$ray-xiaofan-illustrations`。
 - 做项目级日报：用 `$project-daily-summary`。
 - 做会话收尾知识整理：用 `$neat-freak`。
 - 做横纵分析法深度研究：用 `$hv-analysis`。
