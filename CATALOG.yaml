@@ -1,7 +1,7 @@
 hub:
   name: ray-skills-hub
   version: v0.5.0
-  updated: "2026-06-12"
+  updated: "2026-07-09"
 
 skills:
   - id: hv-analysis
@@ -137,3 +137,23 @@ skills:
       - playwright
       - inbox
     last_reviewed: "2026-06-12"
+
+  - id: gzh-design
+    path: third_party/isjiamu/gzh-design-skill
+    source: third_party
+    owner: 甲木 × 摸鱼小李
+    recommended: false
+    maturity: beta
+    version: upstream-ba1f417
+    license: AGPL-3.0-or-later
+    upstream:
+      repo: https://github.com/isjiamu/gzh-design-skill
+      ref: ba1f4175519b481cb3566616c9e5178705067904
+    tags:
+      - wechat
+      - gzh
+      - markdown
+      - html
+      - layout
+      - agent-skill
+    last_reviewed: "2026-07-09"

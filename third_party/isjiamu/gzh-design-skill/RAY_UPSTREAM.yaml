@@ -1,0 +1,17 @@
+source_type: third_party_skill
+skill_name: gzh-design
+upstream:
+  repo: https://github.com/isjiamu/gzh-design-skill
+  ref: ba1f4175519b481cb3566616c9e5178705067904
+  default_branch: main
+  path: .
+license: AGPL-3.0-or-later
+imported_at: "2026-07-09T14:29:22+08:00"
+importer: Codex
+review_status: imported-unmodified
+intended_use:
+  - project-level Codex skill for WeChat public account article layout
+  - upstream mirror in Ray Skills Hub for future controlled upgrades
+notes:
+  - Upstream README and LICENSE declare GNU AGPL-3.0 terms.
+  - Keep third-party material isolated here unless Ray explicitly promotes it to skills/team.
