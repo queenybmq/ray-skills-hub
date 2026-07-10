@@ -22,6 +22,12 @@
 | `capture` | personal | `v0.1.0` | beta | yes | `skills/personal/capture` |
 | `codex-mac-patch` | personal | `v0.1.0` | beta | yes | `skills/personal/codex-mac-patch` |
 
+### Third Party
+
+| Skill | Source | Version | Maturity | Recommended | Path |
+| --- | --- | --- | --- | --- | --- |
+| `gzh-design` | third_party | `upstream-ba1f417` | beta | no | `third_party/isjiamu/gzh-design-skill` |
+
 ## Quick Start
 
 - 管理这个 hub、查看可用 skills、添加/更新 skill、准备发版：用 `$manage-skills-hub`。
@@ -32,6 +38,7 @@
 - 写 Ray 博客文章：用 `$ray-writer`。
 - 一键采集网页或 PDF：用 `$capture`。
 - Codex Desktop macOS 解限补丁：用 `$codex-mac-patch`。
+- 微信公众号文章排版：用第三方 `$gzh-design`（AGPL-3.0-or-later，未提升为 team skill）。
 
 ## Website
 
@@ -108,6 +115,9 @@ curl -fsSL https://raw.githubusercontent.com/Coco422/ray-skills-hub/main/scripts
 
 curl -fsSL https://raw.githubusercontent.com/Coco422/ray-skills-hub/main/scripts/install-skill-from-github.py \
   | python3 - --path skills/personal/codex-mac-patch
+
+curl -fsSL https://raw.githubusercontent.com/Coco422/ray-skills-hub/main/scripts/install-skill-from-github.py \
+  | python3 - --path third_party/isjiamu/gzh-design-skill --name gzh-design
 ```
 
 也可以固定到 release/tag，或安装到自定义目录：
@@ -151,3 +161,7 @@ Ray 会让 agent 处理 PR review、校验、整理和合并。
 ## Third Party
 
 第三方 skill 先放入 `third_party/` 或独立实验目录，记录上游 URL、commit、license 和审阅人；确认可维护后再移入 `skills/team/`。
+
+当前收录：
+
+- `gzh-design`：来自 `isjiamu/gzh-design-skill@ba1f417`，用于把 Markdown / Word / PDF / 纯文本文章排成可粘贴进微信公众号编辑器的 HTML。上游声明 AGPL-3.0-or-later，当前为未修改导入副本。

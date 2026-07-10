@@ -184,7 +184,7 @@ Use the same recurring character identity as the 小反 v4 reference sheet. 小�
 
 ### 5. 小红书竖版知识卡经验回收
 
-来自 `generated/ai-hallucination-xhs-cards/publish` 的这一组经验：
+来自一组 AI 幻觉主题小红书知识卡的实测经验：
 
 - 成功方向：白底手写知识卡比“横版正文插图”更适合 AI 扫盲类小红书图文。
 - 系列结构：封面 1 张 + 6-7 张解释卡 + 1 张收束卡，顺序从误会、机制、风险到行动建议。
